@@ -1,1 +1,15 @@
-/db.sqlite3
+# OSX #
+.DS_Store
+.vscode
+# Byte-compiled / optimized / DLL files #
+__pycache__/
+*.py[cod]
+*$py.class
+staticfiles
+# Django #
+*.log
+db.sqlite3
+media
+
+# Virtual environment
+.venv
