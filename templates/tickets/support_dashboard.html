@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+  <h1>{% trans "Assigned Tickets" %}</h1>
+  <ul>
+    {% for ticket in tickets %}
+      <li>
+        <strong>{{ ticket.title }}</strong> - {{ ticket.get_status_display }}
+        <a href="{% url 'update_ticket' ticket.id %}">{% trans "Update Status" %}</a>
+      </li>
+    {% empty %}
+      <li>{% trans "No assigned tickets." %}</li>
+    {% endfor %}
+  </ul>
+{% endblock %}
